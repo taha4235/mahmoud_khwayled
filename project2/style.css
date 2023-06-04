@@ -1,0 +1,168 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+header{
+    width: 100%;
+    display:flex;
+height: 100%;
+}
+.container-1{
+    width: 50%;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 1s;
+}
+.container-2{
+    width: 50%;
+    height: 100%;
+    background-color:#333;
+    border-bottom-left-radius: 84%;
+    transition: 1s;
+}
+.information{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 160px;
+}
+.information h3{
+    color: white;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.information p{
+    margin-top: 0.3em;
+    letter-spacing: 0.1em;
+    color: white;
+}
+.information button{
+    padding: 0.6em 1.4em;
+    margin-top: 0.9em;
+    background-color:transparent;
+    color: white;
+    outline: 0;
+    border: 0;
+    text-transform: capitalize;
+    border:1px solid white;
+    border-radius: 33px;
+}
+.informations{
+    position: relative;
+    top: 150px;
+}
+.informations span{
+    color: #333;
+}
+.informations h3{
+    color: #333;
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.informations p{
+    color: #222;
+}
+.form-group{
+    width:300px;
+height: 50px;
+   padding: 10px;
+    background-color: #ccc;
+    display: flex;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.form-group input{
+    width: 80%;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    padding: 10px;
+}
+.form-group i{
+    margin-top: 5px;
+    color: #222;
+    margin-left: 4px;
+}
+.container-1 button{
+    padding: 1.2em 1.5em;
+    background-color: transparent;
+    color: white;
+    background-color: #333;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    border-radius: 33px;
+    cursor: pointer;
+}
+.container-1 button:focus{
+    outline-offset: 2px;
+}
+.containerse{
+    text-align:center;
+    background-color: #333;
+}
+.containerse{
+    background-color: yellow;
+}
+.containerse h3{
+    margin-top: -10px;
+}
+#login{
+    border: 1px solid white;
+    cursor: pointer;
+}
+#headers{
+    float: right;
+    position: absolute;
+    right: 0;
+}
+.information_active{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 140px;
+    font-family: sans-serif;
+    color: #333;
+}
+.information_active h1{
+    color: #333;
+    font-family: sans-serif;
+}
+.information_active p{
+    color: #333;
+    margin-top: 10px;
+}
+#active{
+    position: relative;
+    left: 173px;
+}
+#logins{
+    padding: 1em 2em;
+    outline: 0;
+    border: 0;
+    background-color:#333;
+    color: white;
+    border-radius: 33px;
+    cursor: pointer;
+}
+
+#creates{
+    display: none;
+}
+#paso{
+    text-align: left;
+    position: relative;
+  left: 180px;
+  font-size: 16px;
+    top: -20px;
+    display: none;
+}

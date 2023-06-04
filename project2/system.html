@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency Converter</title>
+ <link rel="stylesheet" href="system.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+ <link rel="icon" href="https://www.bing.com/images/search?view=detailV2&ccid=gm3kGpd4&id=6F978E17364D2737F20B42F22621CA4FE1521D80&thid=OIP.gm3kGpd4-8W8lZmdqGqUiwHaHa&mediaurl=https%3a%2f%2fmedia.istockphoto.com%2fvectors%2fcurrency-converter-line-icon-illustration-vector-id1062261554&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.826de41a9778fbc5bc95999da86a948b%3frik%3dgB1S4U%252fKISbyQg%26pid%3dImgRaw%26r%3d0&exph=1024&expw=1024&q=currency+converter+icon&simid=608054205810507292&FORM=IRPRST&ck=4AE1B78F1E9A3E8BAFE8A5F20CF2AD2B&selectedIndex=0">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">currency</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.html">team blog</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      
+   
+  <div class="container">
+    <h2>Currency Converter</h2>
+    <input type="number" id="lbpAmount" placeholder="Enter LBP amount">
+    <select id="currencySelect">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="SAR">SAR</option>
+        <option value="AED">AED</option>
+        <option value="QAR">QAR</option>
+        <option value="EGP">EGP</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+       
+      </select>
+    <input type="submit" value="Convert" onclick="convertCurrency()">
+    <h3>Results:</h3>
+    <div id="results"></div>
+  </div>
+  <div id="contact" class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-6 col-md-8">
+          <div class="card subscription-form">
+            <div class="card-body text-center">
+              <h4 class="card-title">Subscribe to Our Newsletter</h4>
+              <p class="card-text">Stay up to date with our latest news and updates.</p>
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Enter your email" aria-label="Enter your email" aria-describedby="subscribe-btn" id="emails">
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-block" type="submit" id="subscribe-btn">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+<footer>
+    <div class="container text-center">
+        <p>copyright &copy; as mohamad khaled khaled 2022-2023. All rights reserved.</p>
+      </div>
+</footer>
+  <script>
+    var subscribe_btn = document.getElementById("subscribe-btn");
+    var emails = document.getElementById("emails");
+    subscribe_btn.addEventListener("click",()=>{
+        if(emails.value.length==0){
+            alert("first you should enter a data to subscribe")
+        }else{
+            alert("thanks for subscribing")
+        }
+    })
+   function convertCurrency() {
+    
+      var lbpAmount = document.getElementById("lbpAmount").value;
+    
+      var currencySelect = document.getElementById("currencySelect");
+      var targetCurrency = currencySelect.value;
+    
+      var exchangeRates = {
+        USD: 0.000662, 
+        EUR: 0.000537, 
+        SAR: 0.00249,  
+        AED: 0.00243, 
+        QAR: 0.00241, 
+        EGP: 0.01042,  
+        GBP: 0.00047,  
+        JPY: 0.07141,  
+      };
+      
+      var resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = "";
+      if (exchangeRates.hasOwnProperty(targetCurrency)) {
+        var rate = exchangeRates[targetCurrency];
+        var convertedAmount = (lbpAmount * rate).toFixed(2);
+        
+        var resultText = targetCurrency + ": " + convertedAmount;
+        var resultElement = document.createElement("p");
+        resultElement.textContent = resultText;
+        resultsDiv.appendChild(resultElement);
+      } else {
+        console.log("Invalid currency selected.");
+      }
+    }
+   
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login create account</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="image-1.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container" id="containerses">
+        <header>
+            <div class="container-1" id="container-1">
+                <center>
+                    <div class="create_information" id="create_information">
+                        <div class="informations" id="informations">
+                            <h3>sign up</h3>
+                            <span>sign up to use the platform <br>for free</span>
+                            <form>
+                                <div class="form-group">
+                                    <i class="fa-solid fa-user"></i>
+                                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="text" name="email" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input type="password" name="password" id="password"
+                                        placeholder="Enter your password" required>
+                                </div>
+                                <span id="paso">your password is <span id="strength_password"></span></span>
+                                <button id="creates">create account</button>
+                            </form>
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <div class="container-2" id="container-2">
+                <div class="information">
+                    <h3>sign up</h3>
+                    <p>sign up to keep connected with <br>your personal account</p>
+                    <button id="create">create account</button>
+                </div>
+            </div>
+        </header>
+    </div>
+    <script>
+        var create = document.getElementById("create");
+        var createcontainer = document.getElementById("create_container");
+        var creates = document.getElementById("creates");
+        var container = document.getElementById("create_information");
+        var container_2 = document.getElementById("container-2");
+        var informations = document.getElementById("informations");
+        var password = document.getElementById("password");
+        var firstcontainer = document.getElementById("container-1");
+        var containerses = document.getElementById("containerses");
+        password.addEventListener("input",()=>{
+            var paso = document.getElementById("paso");
+            var strength_password = document.getElementById("strength_password");
+
+            if(password.value.length>=8){
+                creates.style.display="block";
+                password.style.outlineColor="green";
+                paso.style.display="block";
+                strength_password.innerHTML="strength";
+                strength_password.style.color="green";
+            }
+        })
+        creates.addEventListener("click", () => {
+            container.style.backgroundColor = "#333";
+            container.style.height = "656px";
+            container.style.borderBottomRightRadius = "50%";
+            container_2.style.backgroundColor = "whitesmoke";
+            informations.style.display = "none";
+
+            container.innerHTML = `
+        <div class="containerse" id="containerse">
+            <div class="information">
+                <h3>login</h3>
+                <p>sign in to keep connected with <br>your personal account</p><br>
+                <button id="login">login</button>
+            </div>
+        </div>
+        `;
+     
+            container_2.innerHTML = `
+        <center>
+        <div class="info">
+            <div class="information_active">
+              <h1>login</h1>
+              <p>sign in to keep connected with <br>your personal account</p><br>
+              <form action="system.html">
+              <div class="form-group" id="active">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <input type="text" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group" id="active">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input type="password" name="password" id="password"
+                                        placeholder="Enter your password" required>
+                                </div>
+                            <button id="logins">log in</button>
+                </div>
+            </div>
+            </form>
+            </center>
+        `
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>

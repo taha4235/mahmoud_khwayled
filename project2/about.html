@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About us</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style>
+    #show_more,#show_mores,#show_morese{
+        padding: 0.6em 6em;
+        outline: 0;
+        border: 0;
+        background-color:rgba(30, 165, 255, 0.854);
+        color: #fff;
+        font-family: sans-serif;
+        cursor: pointer;
+        border-radius: 0.4em;
+    }
+    #data,#datas,#data3{
+        display: none;
+    }
+    .active{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 1.1em;
+        color: yellow;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="active">About us</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img class="card-img-top" src="image-1.jpg" alt="Service 1">
+          <div class="card-body">
+            <h5 class="card-title">covertin into europe currency</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia commodi obcaecati error molestias magni!<span id="data">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam praesentium doloremque, aut, rerum eius mollitia deleniti suscipit animi pariatur odio perspiciatis quaerat quae corporis distinctio voluptates molestiae delectus? Ipsam, porro!1</span></p>
+            <button id="show_more" ondblclick="dbs()">show more</button>
+
+        </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img class="card-img-top" src="image-2.jpg" alt="Service 2">
+          <div class="card-body">
+            <h5 class="card-title">good performance</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, cum autem. Delectus, mollitia culpa? <span id="datas">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam praesentium doloremque, aut, rerum eius mollitia deleniti suscipit animi pariatur odio perspiciatis quaerat quae corporis distinctio voluptates molestiae delectus? Ipsam, porro!1</span></p>
+            <button id="show_mores" ondblclick="taha()" >show more</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img class="card-img-top" src="image-3.jpg" alt="Service 3">
+          <div class="card-body">
+            <h5 class="card-title">european currency</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quos totam minima accusantium nemo?<span id="data3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam praesentium doloremque, aut, rerum eius mollitia deleniti suscipit animi pariatur odio perspiciatis quaerat quae corporis distinctio voluptates molestiae delectus? Ipsam, porro!1</span></p>
+            <button id="show_morese" ondblclick="taha2()">show more</button>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var show_more = document.getElementById("show_more");
+    var show_mores = document.getElementById("show_mores");
+    var show_morese = document.getElementById("show_morese");
+    show_more.addEventListener("click",()=>{
+        var data = document.getElementById("data").style.display="block";
+    })
+    function dbs(){
+        var data=document.getElementById("data").style.display="none";
+    }
+    function taha(){
+        var datas = document.getElementById("datas").style.display="none";
+    }
+    function taha2(){
+        var data3 = document.getElementById("data3").style.display="none";
+    }
+    show_morese.addEventListener("click",()=>{
+        var data3 = document.getElementById("data3");
+        data3.style.display="block";
+    })
+    var showmores = document.getElementById("show_mores");
+    showmores.addEventListener("click",()=>{
+var datas = document.getElementById("datas").style.display="block";
+    })
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
